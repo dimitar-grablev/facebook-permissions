@@ -1,0 +1,9 @@
+node_modules/
+.build/
+.idea/
+*.log
+*.jpg-*
+.DS_Store
+.project
+.monitor
+.iml
