@@ -3,9 +3,6 @@
   "version": "0.0.1",
   "description": "Node module to retrieve a list of Facebook granted permissions.",
   "main": "index.js",
-  "devDependencies": {
-    "node": "0.9.0"
-  },
   "repository": {
     "type": "git",
     "url": "git@github.com:dimitar-grablev/facebook-permissions.git"
@@ -21,5 +18,11 @@
   "bugs": {
     "url": "https://github.com/dimitar-grablev/facebook-permissions/issues"
   },
-  "homepage": "https://github.com/dimitar-grablev/facebook-permissions"
+  "homepage": "https://github.com/dimitar-grablev/facebook-permissions",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "nodeunit": "^0.9.0"
+  }
 }

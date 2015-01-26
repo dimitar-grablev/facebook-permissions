@@ -6,16 +6,17 @@ var https=require('https');
  * merge sort.
  * @param {string} Facebook user id.
  * @param {string} Facebook access token.
- * @return {object} Facebook permissions.
+ * @param {function} callback Function executed when permissions are retrieved.
  */
 
-var facebookPermissions = module.exports = function facebookPermissions(userId, accessToken){
+var facebookPermissions = module.exports = function facebookPermissions(userId, accessToken, cb){
 
     var options = {
-        path: 'https://graph.facebook.com/' + userId + '/permissions?access_token=' + accessToken
+        host: 'graph.facebook.com',
+        path: '/' + userId + '/permissions?access_token=' + accessToken
     };
 
-    https.get(options,function(res){
+    https.get(options, function(res){
         var data = '';
 
         res.on('data', function (chunk) {
@@ -23,7 +24,7 @@ var facebookPermissions = module.exports = function facebookPermissions(userId, 
         });
 
         res.on('end', function() {
-     return eval("(" + data + ")");
+            cb(eval("(" + data + ")"));
         });
     });
 }
