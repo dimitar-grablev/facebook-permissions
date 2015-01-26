@@ -1,6 +1,6 @@
 {
   "name": "facebook-permissions",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Node module to retrieve a list of Facebook granted permissions.",
   "scripts": {
     "test": "nodeunit test.js"
